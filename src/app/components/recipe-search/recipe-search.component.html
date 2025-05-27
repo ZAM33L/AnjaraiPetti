@@ -1,0 +1,18 @@
+
+ 
+<div class="search-container">
+        <input type="text" [(ngModel)]="query" placeholder="Search for recipes..." />
+        <button (click)="search()">Search</button>
+        <button (click)="clearSearch()" class="clear-btn">Clear</button> 
+</div>
+      
+
+      <div class="recipes" *ngIf="recipes.length">
+        <div *ngFor="let recipe of recipes" class="recipe-card">
+          <h3>{{ recipe.name }}</h3>
+          <img [src]="recipe.thumbnail_url" alt="{{ recipe.name }}" />
+          <p>{{ recipe.description }}</p>
+          <a [routerLink]="['/recipe', recipe.id]">View Details</a>
+        </div>
+      </div>
+      

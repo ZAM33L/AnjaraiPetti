@@ -1,0 +1,36 @@
+<div class="recipe-detail-container" *ngIf="recipe">
+        <div class="recipe-header">
+          <img [src]="recipe.thumbnail_url" alt="{{ recipe.name }}" />
+          <div class="recipe-info">
+            <h2>{{ recipe.name }}</h2>
+            <p>{{ recipe.description }}</p>
+          </div>
+        </div>
+      
+        <div class="recipe-content">
+          <div class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+              <li *ngFor="let ingredient of recipe.sections[0]?.components">
+                {{ ingredient.raw_text }}
+              </li>
+            </ul>
+          </div>
+      
+          <div class="instructions">
+            <h3>Instructions</h3>
+            <ol>
+              <li *ngFor="let step of recipe.instructions">
+                {{ step.display_text }}
+              </li>
+            </ol>
+          </div>
+        </div>
+      
+        <!-- Back Button -->
+        <button class="back-button" (click)="goBack()">⬅ Back</button>
+      </div>
+      
+      <!-- Show loading message while data is being fetched -->
+      <p *ngIf="!recipe" class="loading-text">Loading recipe details...</p>
+      
