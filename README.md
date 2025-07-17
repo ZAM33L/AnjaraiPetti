@@ -2,6 +2,8 @@
 
 **AnjaraiPetti** is a modern recipe web application designed for food lovers to explore, save, and share a variety of recipes. Whether you're a beginner or a seasoned home cook, AnjaraiPetti brings delicious dishes to your fingertips with a clean interface and user-friendly experience.
 
+https://github.com/user-attachments/assets/6fa49772-e1d4-4f0b-a3ec-5682f26a8466
+
 ---
 
 ## ✨ Features
